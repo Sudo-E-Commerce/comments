@@ -86,20 +86,27 @@ class CommentServiceProvider extends ServiceProvider
     {
         if ($this->app->runningInConsole()) {
             $assets = [
-                //
+                __DIR__.'/../../resources/assets' => public_path('platforms/comments'),
             ];
             $config = [
                 __DIR__.'/../../config/SudoComment.php' => config_path('SudoComment.php'),
             ];
-            $all = array_merge($assets, $config);
+            $view = [
+                __DIR__.'/../../resources/views/list.blade.php' => resource_path('views/packages/comments/list.blade.php'),
+                __DIR__.'/../../resources/views/item.blade.php' => resource_path('views/packages/comments/item.blade.php'),
+                __DIR__.'/../../resources/views/add.blade.php' => resource_path('views/packages/comments/add.blade.php'),
+            ];
+            $all = array_merge($assets, $config, $view);
             // Chạy riêng
             $this->publishes($all, 'sudo/comment');
             $this->publishes($assets, 'sudo/comment/assets');
             $this->publishes($config, 'sudo/comment/config');
+            $this->publishes($view, 'sudo/comment/view');
             // Khởi chạy chung theo core
             $this->publishes($all, 'sudo/core');
             $this->publishes($assets, 'sudo/core/assets');
             $this->publishes($config, 'sudo/core/config');
+            $this->publishes($view, 'sudo/core/view');
         }
     }
 
