@@ -1,0 +1,43 @@
+{
+	"Bình luận": "Comment",
+
+	"Xuất Excel": "Export",
+	"Tên người bình luận": "Comment Name",
+	"Nội dung bình luận": "Comment Content",
+	"Ngày bình luận": "Comment Time",
+	"Thông tin chung": "Gereral Infomation",
+	"Thông tin bình luận": "Comment Infomation",
+	"Bài bình luận": "Comment Post",
+	"Trả lời": "Reply",
+	"Trả lời bình luận": "Reply",
+	"Sửa nhanh": "Quick Edit",
+	"Trả lời cho bình luận:": "Reply for comment:",
+	"Xem bài viết": "View",
+	"Họ và tên": "Fullname",
+	"Điện thoại": "Phone",
+	"Đóng": "Close",
+	"Sửa bình luận": "Edit Comment",
+	"Trả lời thành công.": "Reply success",
+	"Ảnh bình luận": "Comment Image",
+	"ảnh": "Image",
+
+	"Hãy để lại bình luận của bạn tại đây!": "Leave your comment here!",
+	"Tìm theo nội dung, người gửi...": "Search",
+	"Qui định đăng bình luận": "Rules for posting comments",
+	"Gửi ảnh": "Image",
+	"Bất cứ điều gì bạn quan tâm, hãy viết ở đây...": "Whatever you are interested in, write here ...",
+	"Gửi": "Send",
+	"Gửi bình luận": "Send",
+
+	"Các File phải có kích thước nhỏ hơn": "Filesize must be smaller",
+	"Định dạng cho phép là": "Format allowed is",
+	"Bạn cần nhập đấy đủ thông tin.": "You need to enter enough information.",
+	"Định dạng số điện thoại không chính xác.": "Phonenumber format is incorrect.",
+	"Định dạng Email không chính xác.": "Email format is incorrect.",
+	"Có lỗi xảy ra. Vui lòng thử lại!": "An error occurred. Please try again!",
+	"Quản trị bình luận": "Administer comments",
+	"Quản trị viên": "Admin",
+
+	"Hiện": "Show",
+	"Ẩn": "Hide"
+}
