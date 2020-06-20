@@ -7,7 +7,7 @@
 			'no_comment_text' => 'Hãy để lại bình luận của bạn tại đây!'
 		])
 	*/
-	$comments = \Sudo\Comment\Models\Comment::loadComment($type, $type_id, 4);
+	$comments = \Sudo\Comment\Models\Comment::loadComment($type, $type_id);
 	$comment_totals = $comments['comment_totals'] ?? 0;
 	$comment_parents = $comments['comment_parents'] ?? [];
 	$comment_childs = $comments['comment_childs'] ?? [];
