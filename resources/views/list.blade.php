@@ -54,10 +54,40 @@
 	@endphp
 	<div class="variable" data-value="{{$variable ?? ''}}" ></div>
 	<div class="comments-loading"><div class="comments-loading__box"></div></div>
-	<div class="comments-popup">
-		<div class="comments-popup__close"><i class="fa fa-remove"></i></div>
-		<div class="comments-popup__body">
-			<img src="{{getImage()}}" alt="">
+
+	<section class="comments-popup previews">
+		<div class="comments-popup__close" data-comments_close><i class="fa fa-remove"></i></div>
+		<div class="comments-popup__dialog">
+			<div class="comments-popup__body">
+				<img src="{{getImage()}}" alt="">
+			</div>
+		</div>
+	</section>
+	<div class="comments-popup moreinfo">
+		<div class="comments-popup__close" data-comments_close></div>
+		<div class="comments-popup__dialog">
+			<div class="comments-popup__header">
+				<div class="comments-popup__header__content">
+					<p>@lang('Thông tin bình luận')</p>
+				</div>
+				<div class="comments-popup__header__close" data-comments_close><i class="fa fa-close"></i></div>
+			</div>
+			<div class="comments-popup__body">
+				<div class="moreinfo-form">
+					<div class="form-group">
+						<input type="text" class="form-control" name="name" placeholder="@lang('Họ và tên')">
+					</div>
+					<div class="form-group">
+						<input type="text" class="form-control" name="phone" placeholder="@lang('Điện thoại')">
+					</div>
+					<div class="form-group">
+						<input type="text" class="form-control" name="email" placeholder="@lang('Email')">
+					</div>
+					<div class="form-group">
+						<button type="button" data-comments_submit><i class="fa fa-paper-plane"></i>@lang('Gửi bình luận')</button>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 </div>
