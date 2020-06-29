@@ -52,13 +52,12 @@
 			'ajax_search_url' => route('app.ajax.comments.search_comments'),
 		]));
 	@endphp
-	<div  class="variable" data-value="{{$variable ?? ''}}" ></div>
-	<div  class="comments-loading"><div class="comments-loading__box"></div></div>
-	<div  class="comments-popup">
+	<div class="variable" data-value="{{$variable ?? ''}}" ></div>
+	<div class="comments-loading"><div class="comments-loading__box"></div></div>
+	<div class="comments-popup">
 		<div class="comments-popup__close"><i class="fa fa-remove"></i></div>
 		<div class="comments-popup__body">
-				<img src="{{getImage()}}" alt="">
-			</div>
+			<img src="{{getImage()}}" alt="">
 		</div>
 	</div>
 </div>
