@@ -13,5 +13,5 @@ return [
 	'status_default' => 1,
 
 	// Số trang load tại view
-	'page_number' => 2,
+	'page_number' => 5,
 ];
