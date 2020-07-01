@@ -35,7 +35,7 @@ class CommentController extends AdminController
         $listdata->search('status', 'Trạng thái', 'array', config('SudoComment.status'));
         $listdata->search('type', '', 'hidden');
         $listdata->search('type_id', '', 'hidden');
-        $listdata->searchBtn('Xuất Excel', '#', 'primary', 'fas fa-file-excel');
+        // $listdata->searchBtn('Xuất Excel', '#', 'primary', 'fas fa-file-excel');
         // Build các button hành động
         $listdata->btnAction('status', 1, __('Hiện'), 'success', 'fas fa-edit');
         $listdata->btnAction('status', 0, __('Ẩn'), 'info', 'fas fa-window-close');
