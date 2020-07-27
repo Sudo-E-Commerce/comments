@@ -52,7 +52,7 @@
 			'ajax_search_url' => route('app.ajax.comments.search_comments'),
 		]));
 	@endphp
-	<div class="variable" data-value="{{$variable ?? ''}}" ></div>
+	<div class="lang_comments" data-value="{{$variable ?? ''}}" ></div>
 	<div class="comments-loading"><div class="comments-loading__box"></div></div>
 
 	<section class="comments-popup previews">
