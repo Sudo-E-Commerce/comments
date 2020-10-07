@@ -133,7 +133,7 @@ class CommentController extends AdminController
         // Điều hướng
         return redirect(route('admin.'.$this->table_name.'.'.$redirect, $id))->with([
             'type' => 'success',
-            'message' => __('Core::admin.update_success')
+            'message' => __('Translate::admin.update_success')
         ]);
     }
 
@@ -171,7 +171,7 @@ class CommentController extends AdminController
             $message = 'Trả lời thành công.';
         } catch (\Exception $e) {
             $status = 2;
-            $message = 'Core::admin.ajax_error_edit';
+            $message = 'Translate::admin.ajax_error_edit';
         }
         return [
             'status' => $status,
@@ -204,15 +204,15 @@ class CommentController extends AdminController
                 // Kiểm tra dữ liệu đã được thay đổi hay chưa
                 if ($save_count != 0) {
                     $status = 1;
-                    $message = 'Core::admin.update_success';
+                    $message = 'Translate::admin.update_success';
                 } else {
-                    $message = 'Core::admin.ajax_error_edit';
+                    $message = 'Translate::admin.ajax_error_edit';
                 }
             } else {
-                $message = 'Core::admin.no_data_edit';
+                $message = 'Translate::admin.no_data_edit';
             }
         } else {
-            $message = 'Core::admin.no_permission';
+            $message = 'Translate::admin.no_permission';
         }
         return [
             'status' => $status,
