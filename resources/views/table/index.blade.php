@@ -50,14 +50,14 @@
 					    	'name'				=> 'name_'.$value->id,
 							'value' 			=> Auth::guard('admin')->user()->getName(),
 							'required' 			=> 0,
-							'label' 			=> '* Họ và tên',
+							'label' 			=> '*'.__('Họ và tên'),
 							'has_full' 			=> true,
 					    ])
 					    @include('Form::base.text', [
 					    	'name'				=> 'phone_'.$value->id,
 							'value' 			=> '',
 							'required' 			=> 0,
-							'label' 			=> 'Điện thoại',
+							'label' 			=> __('Điện thoại'),
 							'has_full' 			=> true,
 					    ])
 					    @include('Form::base.text', [
@@ -72,7 +72,7 @@
 						    	'name'				=> 'image_'.$value->id,
 								'value' 			=> [],
 								'required' 			=> 0,
-								'label' 			=> 'Ảnh bình luận',
+								'label' 			=> __('Ảnh bình luận'),
 								'title_btn' 		=> 'ảnh',
 								'has_full' 			=> true,
 						    ])
@@ -81,7 +81,7 @@
 					    	'name'				=> 'content_'.$value->id,
 							'value' 			=> '',
 							'required' 			=> 0,
-							'label' 			=> '* Nội dung bình luận',
+							'label' 			=> '*'.__('Nội dung bình luận'),
 							'has_full' 			=> true,
 					    ])
 					</div>
@@ -91,8 +91,8 @@
 						<button type="button" class="btn btn-default btn-sm" data-dismiss="modal">@lang('Đóng')</button>
 						<button type="submit" class="btn btn-primary btn-sm" 
 							data-quick_reply_comment
-							data-empty_content="@lang('Nội dung bình luận') @lang('Form::form.valid.no_empty')"
-							data-empty_name="@lang('Họ và tên') @lang('Form::form.valid.no_empty')"
+							data-empty_content="@lang('Nội dung bình luận') @lang('Translate::form.valid.no_empty')"
+							data-empty_name="@lang('Họ và tên') @lang('Translate::form.valid.no_empty')"
 						>@lang('Trả lời')</button>
 					</div>
 				</div>
@@ -114,7 +114,7 @@
 					    	'name'				=> 'edit_content_'.$value->id,
 							'value' 			=> $value->content,
 							'required' 			=> 0,
-							'label' 			=> '* Nội dung bình luận',
+							'label' 			=> '*'.__('Nội dung bình luận'),
 							'has_full' 			=> true,
 					    ])
 					    @if (config('SudoComment.upload_image') == true)
@@ -122,7 +122,7 @@
 						    	'name'				=> 'edit_image_'.$value->id,
 								'value' 			=> array_diff(explode(',', $value->image), array("")),
 								'required' 			=> 0,
-								'label' 			=> 'Ảnh bình luận',
+								'label' 			=> __('Ảnh bình luận'),
 								'title_btn' 		=> 'ảnh',
 								'has_full' 			=> true,
 						    ])
@@ -130,7 +130,7 @@
 					</div>
 					<div class="modal-footer justify-content-between">
 						<button type="button" class="btn btn-default btn-sm" data-dismiss="modal">@lang('Đóng')</button>
-						<button type="submit" class="btn btn-primary btn-sm" data-quick_edit_comment data-empty="@lang('Nội dung bình luận') @lang('Form::form.valid.no_empty')">@lang('Sửa')</button>
+						<button type="submit" class="btn btn-primary btn-sm" data-quick_edit_comment data-empty="@lang('Nội dung bình luận') @lang('Translate::form.valid.no_empty')">@lang('Sửa')</button>
 					</div>
 				</div>
 			</form>

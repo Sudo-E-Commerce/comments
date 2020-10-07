@@ -39,7 +39,7 @@ class CommentController extends AdminController
         // Build các button hành động
         $listdata->btnAction('status', 1, __('Hiện'), 'success', 'fas fa-edit');
         $listdata->btnAction('status', 0, __('Ẩn'), 'info', 'fas fa-window-close');
-        $listdata->btnAction('delete', -1, __('Table::table.trash'), 'danger', 'fas fa-trash');
+        $listdata->btnAction('delete', -1, __('Translate::table.trash'), 'danger', 'fas fa-trash');
         // Build bảng
         $listdata->add('', 'Thông tin chung', 0);
         $listdata->add('', 'Thông tin bình luận', 0);
