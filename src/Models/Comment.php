@@ -87,20 +87,24 @@ class Comment extends BaseModel {
 		$keyword = formatKeyword($keyword);
 		// Comment cha
 		$comment_parents = Comment::where('parent_id', 0)
-									->where('name', 'LIKE', '%'.$keyword['key'].'%')
-									->orWhere('content', 'LIKE', '%'.$keyword['key'].'%')
-									->where('type', $type)
-									->where('type_id', $type_id)
-									->where('status', 1)
-									->orderBy('id','desc')
-									->paginate(config('SudoComment.page_number'), ['*'], 'pageCmt');
-		// Bình luận con
-		$comment_childs = Comment::where('status', 1)
-									->where('name', 'LIKE', '%'.$keyword['key'].'%')
-									->orWhere('content', 'LIKE', '%'.$keyword['key'].'%')
-									->whereIn('parent_id',$comment_parents->pluck('id')->toArray())
-									->orderBy('id','asc')
-									->get();
+                                    ->where('type', $type)
+                                    ->where('type_id', $type_id)
+                                    ->where(function($query) use ($keyword) {
+                                        $query->where('name', 'LIKE', '%'.$keyword['key'].'%')
+                                        ->orWhere('content', 'LIKE', '%'.$keyword['key'].'%');
+                                    })
+                                    ->where('status', 1)
+                                    ->orderBy('id','desc')
+                                    ->paginate(config('SudoComment.page_number'), ['*'], 'pageCmt');
+        // Bình luận con
+        $comment_childs = Comment::where('status', 1)
+                                    ->whereIn('parent_id',$comment_parents->pluck('id')->toArray())
+                                    ->where(function($query) use ($keyword) {
+                                        $query->where('name', 'LIKE', '%'.$keyword['key'].'%')
+                                        ->orWhere('content', 'LIKE', '%'.$keyword['key'].'%');
+                                    })
+                                    ->orderBy('id','asc')
+                                    ->get();
 
 		return [
 			'comment_parents' 	=> $comment_parents,
