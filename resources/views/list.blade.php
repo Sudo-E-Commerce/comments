@@ -91,4 +91,6 @@
 		</div>
 	</div>
 </div>
+<script type="text/javascript" src="{{ asset('platforms/comments/web/resizeImage/jquery.resizeImg.js') }}"></script>
+<script type="text/javascript" src="{{ asset('platforms/comments/web/resizeImage/mobileBUGFix.mini.js') }}"></script>
 <script type="text/javascript" src="{{ asset('platforms/comments/web/js/comments.min.js') }}"></script>
